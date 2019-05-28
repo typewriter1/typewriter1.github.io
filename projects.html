@@ -38,6 +38,35 @@ Understanding Component-Entity-Systems.</a>.
 </p>
 
 <p>
+Example usage:
+<pre>
+<code>
+import pycomponent
+
+ecs = pycomponent.EntityManager()
+
+class MessageComponent:
+    def __init__(self, message):
+        self.message = message
+
+entity = ecs.create_entity()
+component = MessageComponent()
+ecs.add_component(entity, component)
+
+def message_system():
+    for entity in ecs.get_entities():
+        if entity.has_component(MessageComponent):
+            print(ecs.get_component(entity, MessageComponent)
+            
+ecs.add_system(message_system)
+
+while True:
+    ecs.do_frame()
+</code>
+</pre>
+</p>
+
+<p>
 <a href="https://github.com/typewriter1/ComPyNent">ComPyNent source code on GitHub</a>
 </p>
 
