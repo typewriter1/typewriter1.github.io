@@ -1,9 +1,9 @@
 :root{
-	--bg: #f9ede9;
-	--theme1: #dc416d;
-	--theme2: #a5dcae;
+	--bg: #ffffff;
+	--theme1: #a5dcae;
+	--theme2: #980952;
 	--theme3: #83d2e4c7;
-	--theme4: #94832d;
+	--theme4: #4e64f9;
 }
 
 h1{
@@ -29,7 +29,7 @@ a{
 }
 
 div.content a:hover, div.content a:focus{
-	color: var(--theme1);
+	color: var(--theme4);
 	text-decoration: underline;
 }
 
