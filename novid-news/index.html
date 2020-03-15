@@ -22,10 +22,21 @@
 <div class="content">
   
 <p>
-Hello! This is my website.
-  </p>
+Hello! Here you can find news articles that do not mention COVID-19.
+</p>
 
+ 
 </div>
 
+<script>
+  var url = 'http://newsapi.org/v2/top-headlines?' +
+            'country=uk&' +
+            'apiKey=5c225ea0ebe041dd8b8515ba6084995c';
+  var req = new Request(url);
+  fetch(req)
+      .then(function(response) {
+          console.log(response.json());
+    })
+</script>
 </body>
 </html>
