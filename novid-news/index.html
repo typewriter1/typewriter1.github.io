@@ -29,10 +29,10 @@ Hello! Here you can find news articles that do not mention COVID-19.
 </div>
 
 <script>
-  var url = 'http://newsapi.org/v2/top-headlines?' +
-            'country=uk&' +
+  var url = 'https://newsapi.org/v2/top-headlines?' +
+            'country=us&' +
             'apiKey=5c225ea0ebe041dd8b8515ba6084995c';
-  var req = new Request(url);
+  var req = new Request(url, {mode: "no-cors"});
   fetch(req)
       .then(function(response) {
           console.log(response.json());
